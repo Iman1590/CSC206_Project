@@ -41,6 +41,22 @@ def prime(num_input):
     
                 prime_list.append(num)
 
+        
+    count = 0
+
+    if len(prime_list) > 20:
+
+        for item in prime_list:
+
+            if count <= 10:
+
+                updated_primes.append(item)
+                count = count + 1
+            
+            else:
+               prime_list.clear()
+               prime_list.append(updated_primes)
+
 
     # output_page = request.form.get("output")
   
