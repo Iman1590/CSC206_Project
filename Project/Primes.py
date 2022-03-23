@@ -10,16 +10,6 @@ prime_list = []
 def index():
     return render_template('index.html')
 
-# @app.route('/', methods=['POST'])
-# def form():
-    
-#     user_input = int(request.form.get("num"))
-#     # prime(user_input)
-
-#     form = request.form
-
-#     return render_template('form.html', form = prime(user_input) )
-
 @app.route('/', methods=['POST'])
 def form():
     
@@ -27,7 +17,7 @@ def form():
 
     prime(user_input)
 
-    return render_template('form.html', primes = prime_list)
+    return render_template('form.html', output = prime_list)
 
 def prime(num_input):
     start = time.time()
