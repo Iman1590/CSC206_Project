@@ -24,8 +24,6 @@ def prime(num_input):
 
     num_input = int(request.form.get("num"))
 
-  
-
     for num in range(1, num_input + 1):
    
         if num > 1:
@@ -36,23 +34,19 @@ def prime(num_input):
 
                     break
             else:
-                 if len(prime_list) == 20:
+
+                if len(prime_list) == 20:
 
                     return prime_list
     
                 prime_list.append(num)
-            
-            else:
-               prime_list.clear()
-               prime_list.append(updated_primes)
 
-
+    
     output_page = request.form.get("output")
 
     output_num = print(prime_list)
 
-  
-
+    # print(updated_primes)
 
     # print("--- %s seconds ---" % (time.time() - start))
 
