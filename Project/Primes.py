@@ -22,8 +22,6 @@ def form():
 def prime(num_input):
     start = time.time()
 
-    # num_input = int(input("Enter a number: "))
-
     num_input = int(request.form.get("num"))
 
   
@@ -38,31 +36,18 @@ def prime(num_input):
 
                     break
             else:
+                 if len(prime_list) == 20:
+
+                    return prime_list
     
                 prime_list.append(num)
-
-        
-    count = 0
-
-    if len(prime_list) > 20:
-
-        for item in prime_list:
-
-            if count <= 10:
-
-                updated_primes.append(item)
-                count = count + 1
             
             else:
                prime_list.clear()
                prime_list.append(updated_primes)
 
 
-    # output_page = request.form.get("output")
-  
-    
-
-    
+    output_page = request.form.get("output")
 
     output_num = print(prime_list)
 
